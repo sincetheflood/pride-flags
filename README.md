@@ -5,4 +5,9 @@ A mildly opinionated (as in I am picking and choosing which flags I want to use)
 
 All flags are available as both SVGs and PNGs inside the `flags/` directory and are split up by gender and orientation.  Templates to ease the creation of new flags are available inside the `templates/` directory.
 
-The PNG flags are created by converting the SVG files to PNGs using the [librsvg](https://gitlab.gnome.org/GNOME/librsvg) command `rsvg-convert "${FLAG_NAME}.svg" -o "${FLAG_NAME}.png` and then compressed using the [oxipng](https://github.com/shssoichiro/oxipng) command `oxipng -o max -Z -a --strip all "${FLAG_NAME}.png"`.
+The PNG varients are created by converting the SVG files to PNGs using [librsvg](https://gitlab.gnome.org/GNOME/librsvg) and are then compressed using [oxipng](https://github.com/shssoichiro/oxipng):
+
+```sh
+rsvg-convert "${FLAG_NAME}.svg" --output "${FLAG_NAME}.png"
+oxipng --opt max --zopfli --strip all --alpha "${FLAG_NAME}.png"
+```
