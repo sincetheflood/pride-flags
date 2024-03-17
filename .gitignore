@@ -1,5 +1,1 @@
-# ignore nixos files
-flake.nix
-flake.lock
-.envrc
 .direnv/
