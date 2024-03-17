@@ -11,3 +11,5 @@ The PNG varients are created by converting the SVG files to PNGs using [librsvg]
 rsvg-convert "${FLAG_NAME}.svg" --output "${FLAG_NAME}.png"
 oxipng --opt max --zopfli --strip all --alpha "${FLAG_NAME}.png"
 ```
+
+You are welcome to request flags by creating an [issue](https://github.com/sincetheflood/pride-flags/issues), though I make no promises about adding them. Pull requests are not currently accepted.
